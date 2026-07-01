@@ -6,7 +6,6 @@
   <title>Pozvanie na rande 💌</title>
   <style>
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -21,7 +20,6 @@
       padding: 24px;
       overflow-x: hidden;
     }
-
     .card {
       width: 100%;
       max-width: 780px;
@@ -35,7 +33,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .card::before {
       content: "";
       position: absolute;
@@ -44,14 +41,11 @@
       animation: floatGlow 7s ease-in-out infinite alternate;
       pointer-events: none;
     }
-
     @keyframes floatGlow {
       from { transform: translate(-30px, -20px); }
       to { transform: translate(30px, 20px); }
     }
-
     .content { position: relative; z-index: 1; }
-
     .badge {
       display: inline-block;
       padding: 8px 14px;
@@ -60,28 +54,24 @@
       font-size: 14px;
       margin-bottom: 12px;
     }
-
     h1 {
       font-size: clamp(34px, 7vw, 68px);
       margin: 8px 0 12px;
       line-height: 1.02;
       text-shadow: 0 8px 30px rgba(0,0,0,.22);
     }
-
     p {
       font-size: 18px;
       line-height: 1.55;
       margin: 10px auto;
       max-width: 620px;
     }
-
     .mini-story {
       margin: 24px auto;
       display: grid;
       gap: 12px;
       grid-template-columns: repeat(3, 1fr);
     }
-
     .story-box {
       background: rgba(255,255,255,.18);
       border: 1px solid rgba(255,255,255,.24);
@@ -89,15 +79,12 @@
       padding: 18px 12px;
       min-height: 116px;
     }
-
     .emoji { font-size: 34px; display: block; margin-bottom: 8px; }
-
     .question {
       font-size: clamp(26px, 5vw, 44px);
       font-weight: 800;
       margin-top: 24px;
     }
-
     .buttons {
       min-height: 110px;
       margin: 20px 0;
@@ -108,11 +95,9 @@
       gap: 18px;
       flex-wrap: wrap;
     }
-
     button, select, input {
       font: inherit;
     }
-
     .btn {
       border: 0;
       border-radius: 999px;
@@ -122,21 +107,17 @@
       box-shadow: 0 10px 25px rgba(0,0,0,.18);
       transition: transform .18s ease, box-shadow .18s ease;
     }
-
     .btn:hover { transform: translateY(-2px) scale(1.03); }
-
     .yes {
       background: #fff;
       color: #d94685;
       font-size: 21px;
     }
-
     .no {
       background: rgba(0,0,0,.35);
       color: white;
       position: relative;
     }
-
     .planner {
       margin-top: 26px;
       background: rgba(255,255,255,.16);
@@ -148,13 +129,11 @@
       gap: 16px;
       text-align: left;
     }
-
     label {
       display: block;
       font-weight: 700;
       margin-bottom: 8px;
     }
-
     input, select {
       width: 100%;
       border: 0;
@@ -164,9 +143,7 @@
       color: #2d1b45;
       outline: none;
     }
-
     .full { grid-column: 1 / -1; }
-
     .result {
       margin-top: 20px;
       display: none;
@@ -177,18 +154,15 @@
       text-align: center;
       animation: pop .35s ease;
     }
-
     @keyframes pop {
       from { transform: scale(.9); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
-
     .footer-note {
       opacity: .88;
       font-size: 14px;
       margin-top: 18px;
     }
-
     .heart {
       position: fixed;
       top: -30px;
@@ -197,11 +171,9 @@
       pointer-events: none;
       z-index: 999;
     }
-
     @keyframes fall {
       to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
     }
-
     @media (max-width: 700px) {
       .card { padding: 24px 18px; border-radius: 24px; }
       .mini-story { grid-template-columns: 1fr; }
@@ -218,7 +190,6 @@
         Táto stránka bola vytvorená s veľmi vážnym, vedecky podloženým cieľom:
         zistiť, či pôjdeš so mnou na rande.
       </p>
-
       <section class="mini-story">
         <div class="story-box">
           <span class="emoji">😎</span>
@@ -233,14 +204,11 @@
           A moje srdce má už rezervovaný stôl.
         </div>
       </section>
-
       <div class="question">Pôjdeš so mnou na rande?</div>
-
       <div class="buttons" id="buttonArea">
         <button class="btn yes" id="yesBtn">Áno 😌❤️</button>
         <button class="btn no" id="noBtn">Nie 😭</button>
       </div>
-
       <section class="planner" id="planner">
         <div>
           <label for="date">Kedy?</label>
@@ -262,13 +230,11 @@
           <input id="note" placeholder="Napr. nech je tam jedlo, inak nejdem 😄" />
         </div>
       </section>
-
       <div class="result" id="resultBox">
         <h2>Výborne. Historická udalosť potvrdená. 🎉</h2>
         <p id="summary"></p>
         <p><strong>Screenshotni mi toto alebo mi pošli dátum a plán. Ja sa už budem tváriť, že nie som nervózny.</strong></p>
       </div>
-
       <p class="footer-note">P.S. Tlačidlo „Nie“ má vlastnú vôľu. Netreba ho brať vážne.</p>
     </div>
   </main>
